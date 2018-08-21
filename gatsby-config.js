@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Alaska Airlines App Menu',
   },
   plugins: ['gatsby-plugin-react-helmet'],
 }

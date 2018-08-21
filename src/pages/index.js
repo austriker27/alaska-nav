@@ -6,32 +6,49 @@ const IndexPage = () => (
     
     <Link to="/page-2/">Go to page 2</Link>
     <nav>
-      <ul>
-        <li>My Schedule & Bidding</li>
-        <li>Safety</li>
-          <ul>Reporting</ul>
-              <li>I-21 Injury Reporting</li>
-              <li>ASAP Reporting</li>
-              <li>General ASAP Information</li>
-              <li>Flight Attendant Incident Report</li>
-          <li>Agriculture & Customs</li>
-          <li>Known Crewmember</li>
-          <li>Product Safety Data Search</li>
-        <li>Training</li> 
-        <ul>Administration</ul>
-          <li>OJI and Leaves</li>
-          <li>Pay and Benefits</li>
-          <li>Performance</li>
-          <li>Inflight Resource Directory</li>
-          <li>Mobile and Web</li>
-          <li>AFA</li>
-        <li>Catering & Brand</li>
-        <li>Hotels</li>
-        <li>My Base</li>
-        <li>Recognition</li>
-        <li>My Leadership Team</li>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+      <ul class="nav-list">
+        <li><a href="#!">My Schedule & Bidding</a></li>
+        <li><a href="#!">Safety</a></li>
+          <ul class="nav-dropdown">
+            <li><a href="#!">Reporting</a></li>
+              <ul class="nav-dropdown">
+                <li><a href="#!">I-21 Injury Reporting</a></li>
+                <li><a href="#!">ASAP Reporting</a></li>
+                <li><a href="#!">General ASAP Information</a></li>
+                <li><a href="#!">Flight Attendant Incident Report</a></li>
+              </ul>
+            <li><a href="#!">Agriculture & Customs</a></li>
+            <li><a href="#!">Known Crewmember</a></li>
+            <li><a href="#!">Product Safety Data Search</a></li>
+          </ul>
+        <li><a href="#!">Training</a></li>
+        <li><a href="#!">Administration</a></li>
+          <ul class="nav-dropdown">
+            <li><a href="#!">OJI and Leaves</a></li>
+            <li><a href="#!">Pay and Benefits</a></li>
+            <li><a href="#!">Performance</a></li>
+            <li><a href="#!">Inflight Resource Directory</a></li>
+            <li><a href="#!">Mobile and Web</a></li>
+            <li><a href="#!">AFA</a></li>
+          </ul>
+        <li><a href="#!">Catering & Brand</a></li>
+        <li><a href="#!">Hotels</a></li>
+        <li><a href="#!">My Base</a></li>
+        <li><a href="#!">Recognition</a></li>
+        <li><a href="#!">My Leadership Team</a></li>
       </ul>
     </nav>
+
+    <ul class="bottom-nav">
+      <li><a href="#home" class="active">My Schedule & Bidding</a></li>
+      <li><a href="#news">Safety</a></li>
+      <li><a href="#contact">Administration</a></li>
+      <li><a href="#contact">More</a></li>
+    </ul> 
+
   </div>
 )
 
