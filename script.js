@@ -18,6 +18,8 @@ toggle.addEventListener('click', function () {
   console.log("toggle clicked");
   // toggle class "active" and "openclose" on itemsInNav var
   overflowMenu.classList.toggle("flex-col");
+  overflowMenu.classList.toggle("slide-up-fade-in");
+
   burgerMenu.classList.toggle("openClose");
 }, false);
 
@@ -36,6 +38,7 @@ safetyBottomBar.addEventListener('click', function () {
   safetyBottomBar.classList.toggle("active");
 
   safetySubItems.classList.toggle("hide");
+  safetySubItems.classList.toggle("slide-up-fade-in");
   subItemClass.classList.toggle("flex-col");
 }, false);
 
@@ -49,6 +52,7 @@ let reportingItems = document.querySelector(".reporting-item");
 reportingMenu.addEventListener('click', function () {
   console.log("safetyBottomBar clicked");
   reportingItems.classList.toggle("hide");
+  reportingItems.classList.toggle("slide-up-fade-in");
 
 }, false);
 
@@ -64,6 +68,7 @@ adminMenu.addEventListener('click', function () {
   console.log("adminMenu clicked");
   // toggle class "active" and "openclose" on itemsInNav var
   adminItems.classList.toggle("hide");
+  adminItems.classList.toggle("slide-up-fade-in");
   adminMenu.classList.toggle("active");
 }, false);
 
@@ -82,6 +87,7 @@ scheduleBottomBar.addEventListener('click', function () {
   scheduleBottomBar.classList.toggle("active");
 
   scheduleSubItems.classList.toggle("hide");
+  scheduleSubItems.classList.toggle("slide-up-fade-in");
   subItemClass.classList.toggle("flex-col");
 }, false);
 

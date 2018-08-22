@@ -2,6 +2,16 @@ a {
   text-decoration: none;
 }
 
+.welcome {
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  padding: 1em;
+  font-style: italic;
+  border-bottom: 2px solid white;
+  margin: 0;
+}
+
 nav li {
   padding: 0.5em;
   border: thin black;
@@ -43,7 +53,7 @@ nav img {
 
 .nav-list {
   transition: width 1s linear 2s;
-  margin: 0 0.5em 0 0.5em;
+  margin: 1em;
 }
 
 .nav-list li {
@@ -56,13 +66,13 @@ nav img {
 
 .parent-nav li {
   font-size: 1.5em;
-  font-style: bold;
+  font-weight: bold;
 
 }
 
 .reporting-item {
   font-size: 0.8em;
-  font-style: light;
+  font-weight: light;
 }
 
 .overflow-menu {
@@ -111,13 +121,19 @@ nav img {
 .bottom-nav li {
   width: 25%;
   font-size: 0.8em;
-  font-style: bold;
+  font-weight: bold;
   letter-spacing: 0.1em;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.bottom-nav li:hover {
+  position: relative; 
+  top: -3px;
+  padding-bottom: 3px
 }
 
 .bottom-nav li:last-child {
