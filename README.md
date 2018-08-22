@@ -55,3 +55,10 @@ Thanks to Soylent for powering me through this project.
 MIT License is applicable here.
 
 MIT © [David A. Lindahl](www.davidalindahl.com)
+
+
+TODO: 
+
+- better icons in the bottom bar
+- animated greeting
+- 
