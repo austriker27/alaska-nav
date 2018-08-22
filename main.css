@@ -41,3 +41,15 @@ body {
 ul {
   padding: 0;
 }
+
+/* 
+.container {
+  max-width: 375px; 
+  max-height: 812px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 10px #00416B;
+}
+
+.in-container {
+  width: 100%;
+} */

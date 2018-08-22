@@ -8,10 +8,10 @@ window.addEventListener('click', function () {
 
 // for IE10, .getElementsByClassName()[0];
 let toggle = document.querySelector(".toggle");
-let openClose = document.querySelector(".open-close");
+let openClose = document.querySelectorAll(".open-close");
 
-let overflowMenu = document.querySelector(".overflow-menu");
-let burgerMenu = document.querySelector(".burger-menu");
+let overflowMenu = document.querySelectorAll(".overflow-menu");
+let burgerMenu = document.querySelectorAll(".burger-menu");
 
 
 toggle.addEventListener('click', function () {
@@ -19,6 +19,8 @@ toggle.addEventListener('click', function () {
   // toggle class "active" and "openclose" on itemsInNav var
   overflowMenu.classList.toggle("flex-col");
   overflowMenu.classList.toggle("slide-up-fade-in");
+  toggle.classList.toggle("active");
+
 
   burgerMenu.classList.toggle("openClose");
 }, false);
@@ -28,32 +30,42 @@ toggle.addEventListener('click', function () {
 //-------------------------------------------------------------
 
 let safetyBottomBar = document.querySelector("#safety-bottom-bar");
-let safetySubItems = document.querySelector(".safety");
-let subItemClass = document.querySelector(".sub-item");
+let safetyParent = document.querySelector(".safety");
+let safetyChildren = safetyParent.querySelectorAll(".safety > .parent-nav > .sub-item");
 
 safetyBottomBar.addEventListener('click', function () {
-  console.log("safetyBottomBar clicked");
-  // toggle class "active" and "openclose" on itemsInNav var
-  safetySubItems.classList.toggle("flex-col");
   safetyBottomBar.classList.toggle("active");
+  safetyChildren.forEach(function (child) {
+  child.classList.toggle("hide");
+  child.classList.toggle("slide-up-fade-in");
 
-  safetySubItems.classList.toggle("hide");
-  safetySubItems.classList.toggle("slide-up-fade-in");
-  subItemClass.classList.toggle("flex-col");
 }, false);
+
+
+// let scheduleBottomBar = document.querySelector("#schedule-bottom-bar");
+// let scheduleParent = document.querySelector(".schedule");
+// let scheduleChildren = scheduleParent.querySelectorAll(".schedule > .parent-nav > .sub-item");
+
+// scheduleBottomBar.addEventListener('click', function () {
+//   scheduleBottomBar.classList.toggle("active");
+//   scheduleChildren.forEach(function (child) {
+//     child.classList.toggle("hide");
+//     child.classList.toggle("slide-up-fade-in");
+//   }, false);
+
 
 //-------------------------------------------------------------
 // event listener for reporting menu inside safety
 //-------------------------------------------------------------
 
 let reportingMenu = document.querySelector("#reporting");
-let reportingItems = document.querySelector(".reporting-item");
+let reportingItems = document.querySelectorAll(".reporting-item");
 
 reportingMenu.addEventListener('click', function () {
   console.log("safetyBottomBar clicked");
   reportingItems.classList.toggle("hide");
   reportingItems.classList.toggle("slide-up-fade-in");
-
+  })
 }, false);
 
 
@@ -62,15 +74,17 @@ reportingMenu.addEventListener('click', function () {
 //-------------------------------------------------------------
 
 let adminMenu = document.querySelector("#admin-bottom-bar");
-let adminItems = document.querySelector(".admin-item");
+let adminParent = document.querySelector(".admin");
+let adminChildren = adminParent.querySelectorAll(".admin > .parent-nav > .sub-item");
 
 adminMenu.addEventListener('click', function () {
-  console.log("adminMenu clicked");
-  // toggle class "active" and "openclose" on itemsInNav var
-  adminItems.classList.toggle("hide");
-  adminItems.classList.toggle("slide-up-fade-in");
   adminMenu.classList.toggle("active");
+  adminChildren.forEach(function (child) {
+  child.classList.toggle("hide");
+  child.classList.toggle("slide-up-fade-in");
+  })
 }, false);
+
 
 
 //-------------------------------------------------------------
@@ -78,26 +92,39 @@ adminMenu.addEventListener('click', function () {
 //-------------------------------------------------------------
 
 let scheduleBottomBar = document.querySelector("#schedule-bottom-bar");
-let scheduleSubItems = document.querySelector(".schedule");
+let scheduleParent = document.querySelector(".schedule");
+let scheduleChildren = scheduleParent.querySelectorAll(".schedule > .parent-nav > .sub-item");
 
 scheduleBottomBar.addEventListener('click', function () {
-  console.log("scheduleBottomBar clicked");
-  // toggle class "active" and "openclose" on itemsInNav var
-  scheduleSubItems.classList.toggle("flex-col");
   scheduleBottomBar.classList.toggle("active");
-
-  scheduleSubItems.classList.toggle("hide");
-  scheduleSubItems.classList.toggle("slide-up-fade-in");
-  subItemClass.classList.toggle("flex-col");
+  scheduleChildren.forEach(function (child) {
+    child.classList.toggle("hide");
+    child.classList.toggle("slide-up-fade-in");
+  })
 }, false);
 
 //-------------------------------------------------------------
-// listen for click on parent-menu and toggle sub-item class
+// listen for click on menu-has-children and toggle sub-item class
 //-------------------------------------------------------------
 
-let parentNav = document.querySelector(".parent-nav");
-let subItem = document.querySelector(".sub-item");
+// let 
+// let parentNav = document.querySelector(".sub-parent-nav");
+// let subItem = document.querySelectorAll(".sub-item");
 
-parentNav.addEventListener('click', function () {
-  console.log("parentNav clicked");
-}, false);
+// parentNav.addEventListener('click', function () {
+//   console.log("parentNav clicked");
+// }, false);
+
+
+
+// let scheduleBottomBar = document.querySelector("#schedule-bottom-bar");
+// let scheduleParent = document.querySelector(".schedule");
+// let scheduleChildren = scheduleParent.querySelectorAll(".schedule > .parent-nav > .sub-item");
+
+// scheduleBottomBar.addEventListener('click', function () {
+//   scheduleBottomBar.classList.toggle("active");
+//   scheduleChildren.forEach(function (child) {
+//     child.classList.toggle("hide");
+//     child.classList.toggle("slide-up-fade-in");
+//   })
+// }, false);

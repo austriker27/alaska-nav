@@ -18,48 +18,60 @@
   
 </head>
 
-<body>
+<body class="container">
 
-  <div>
+  <div class="in-container">
     <nav class="">
       <div class="topBanner">
-        <img src="./images/alaska-airlines.svg" height="30" />
+        <img src="./images/alaska-airlines.svg" height="30" class=" slide-bottom" />
 
       </div>
      
-      <p class="welcome fade-in">Good Day Art Vandelay, welcome board the Alaska Airlines companion app.</p>
+      <p class="welcome fade-in">Good Day Art Vandelay, welcome aboard the Alaska Airlines companion app.</p>
       
      
 
       
       <ul class="nav-list">
-        <!-- <li><a href="#!">My Schedule & Bidding</a></li> -->
+
+        <!-- SCHEDULE SUB MENU -->
+        <ul class="parent-nav schedule">
+          <ul class="parent-nav">
+            <li class="sub-item schedule-item menu-has-children hide"><a href="#!">My Schedule</a></li>
+            <li class="sub-item schedule-item menu-has-children hide"><a href="#!">Vacation Days</a></li>
+            <li class="sub-item schedule-item hide menu-has-children"><a href="#!">Sick Days</a></li>
+            <li class="sub-item schedule-item hide"><a href="#!">Holidays</a></li>
+          </ul>
+        </ul>
 
         <!-- SAFETY SUB MENU -->
-        <ul class="parent-nav safety hide">
-
-          <li class="parent-menu" id="reporting"><a href="#!">Reporting</a></li>
+        <ul class="parent-nav safety">
+          
           <ul class="parent-nav">
-            <li class="sub-item reporting-item hide"><a href="#!">I-21 Injury Reporting</a></li>
-            <li class="sub-item reporting-item hide"><a href="#!">ASAP Reporting</a></li>
-            <li class="sub-item reporting-item hide"><a href="#!">General ASAP Information</a></li>
-            <li class="sub-item reporting-item hide"><a href="#!">Flight Attendant Incident Report</a></li>
-          </ul>
-          <li class="sub-item "><a href="#!">Agriculture & Customs</a></li>
-          <li class="sub-item "><a href="#!">Known Crewmember</a></li>
-          <li class="sub-item "><a href="#!">Product Safety Data Search</a></li>
-        </ul>    
+
+            <li class="sub-item menu-has-children hide " id="reporting"><a href="#!">Reporting</a></li>
+            <ul class="sub-parent-nav hide">
+              <li class="sub-item reporting-item hide"><a href="#!">I-21 Injury Reporting</a></li>
+              <li class="sub-item reporting-item hide"><a href="#!">ASAP Reporting</a></li>
+              <li class="sub-item reporting-item hide"><a href="#!">General ASAP Information</a></li>
+              <li class="sub-item reporting-item hide"><a href="#!">Flight Attendant Incident Report</a></li>
+            </ul>
+            <li class="sub-item menu-has-children hide"><a href="#!">Agriculture & Customs</a></li>
+            <li class="sub-item hide"><a href="#!">Known Crewmember</a></li>
+            <li class="sub-item hide"><a href="#!">Product Safety Data Search</a></li>
+          </ul>    
+        </ul>
 
         
 
         <!-- ADMIN SUB MENU -->
         <ul class="parent-nav admin">
           <ul class="parent-nav">
-            <li class="sub-item admin-item hide"><a href="#!">OJI and Leaves</a></li>
-            <li class="sub-item admin-item hide"><a href="#!">Pay and Benefits</a></li>
-            <li class="sub-item admin-item hide"><a href="#!">Performance</a></li>
+            <li class="sub-item admin-item menu-has-children hide"><a href="#!">OJI and Leaves</a></li>
+            <li class="sub-item admin-item menu-has-children hide"><a href="#!">Pay and Benefits</a></li>
+            <li class="sub-item admin-item hide menu-has-children"><a href="#!">Performance</a></li>
             <li class="sub-item admin-item hide"><a href="#!">Inflight Resource Directory</a></li>
-            <li class="sub-item admin-item hide"><a href="#!">Mobile and Web</a></li>
+            <li class="sub-item admin-item menu-has-children hide"><a href="#!">Mobile and Web</a></li>
             <li class="sub-item admin-item hide"><a href="#!">AFA</a></li>
           </ul>
         </ul>
@@ -67,7 +79,7 @@
         <!-- items not in bottom bar -->
         <ul class="overflow-menu hide">
           <li><a href="#!">Training</a></li>
-          <li><a href="#!">Catering & Brand</a></li>
+          <li><a href="#!"  class="menu-has-children">Catering & Brand</a></li>
           <li><a href="#!">Hotels</a></li>
           <li><a href="#!">My Base</a></li>
           <li><a href="#!">Recognition</a></li>
