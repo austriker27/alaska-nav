@@ -7,23 +7,37 @@ window.addEventListener('click', function () {
 //-------------------------------------------------------------
 
 // for IE10, .getElementsByClassName()[0];
-let toggle = document.querySelector(".toggle");
-let openClose = document.querySelectorAll(".open-close");
+let overflowTarget = document.querySelector(".overflow-target");
+// let openClose = document.querySelectorAll(".open-close");
 
-let overflowMenu = document.querySelectorAll(".overflow-menu");
-let burgerMenu = document.querySelectorAll(".burger-menu");
+let overflowMenuParent = document.querySelector(".overflow");
+let overflowChildren = overflowMenuParent.querySelectorAll(".overflow > .parent-nav > .sub-item");
 
-
-toggle.addEventListener('click', function () {
-  console.log("toggle clicked");
-  // toggle class "active" and "openclose" on itemsInNav var
-  overflowMenu.classList.toggle("flex-col");
-  overflowMenu.classList.toggle("slide-up-fade-in");
-  toggle.classList.toggle("active");
+// let burgerMenu = document.querySelectorAll(".burger-menu");
 
 
-  burgerMenu.classList.toggle("openClose");
+overflowTarget.addEventListener('click', function () {
+  overflowTarget.classList.toggle("active");
+  overflowChildren.forEach(function (child) {
+    child.classList.toggle("hide");
+    child.classList.toggle("slide-up-fade-in")
+  })
+  // burgerMenu.classList.toggle("openClose");
 }, false);
+
+
+// let safetyBottomBar = document.querySelector("#safety-bottom-bar");
+// let safetyParent = document.querySelector(".safety");
+// let safetyChildren = safetyParent.querySelectorAll(".safety > .parent-nav > .sub-item");
+
+// safetyBottomBar.addEventListener('click', function () {
+//   safetyBottomBar.classList.toggle("active");
+//   safetyChildren.forEach(function (child) {
+//     child.classList.toggle("hide");
+//     child.classList.toggle("slide-up-fade-in");
+
+//   }, false);
+
 
 //-------------------------------------------------------------
 // event listeners for bottom bar - safety

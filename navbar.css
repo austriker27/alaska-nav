@@ -196,12 +196,12 @@ nav img {
   width: 400px;
 	}
 
-.open-close .toggle:nth-child(2) { 
+.open-close .overflow-target:nth-child(2) { 
   opacity: 0;
 }
 
-.open-close .toggle:nth-child(1),
-.open-close .toggle:nth-child(3) {
+.open-close .overflow-target:nth-child(1),
+.open-close .overflow-target:nth-child(3) {
   z-index: 100;
   transform: rotate(45deg);
 	}

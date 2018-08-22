@@ -61,4 +61,4 @@ TODO:
 
 - better icons in the bottom bar
 - animated greeting
-- 
+- make more dry, espcially in DOM manipulation (one example would be writing a function to toggle children in the various menus on click)
