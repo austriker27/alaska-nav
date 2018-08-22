@@ -210,9 +210,14 @@ nav img {
 
 .bottom-nav li.active a {
   color: white;
+  font-weight: bold;
 }
 
 .bottom-nav li.active svg path {
   fill: white;
 }
 
+
+.sub-parent-nav > li {
+  margin-left: 2em;
+}
