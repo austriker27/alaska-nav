@@ -26,19 +26,6 @@ overflowTarget.addEventListener('click', function () {
 }, false);
 
 
-// let safetyBottomBar = document.querySelector("#safety-bottom-bar");
-// let safetyParent = document.querySelector(".safety");
-// let safetyChildren = safetyParent.querySelectorAll(".safety > .parent-nav > .sub-item");
-
-// safetyBottomBar.addEventListener('click', function () {
-//   safetyBottomBar.classList.toggle("active");
-//   safetyChildren.forEach(function (child) {
-//     child.classList.toggle("hide");
-//     child.classList.toggle("slide-up-fade-in");
-
-//   }, false);
-
-
 //-------------------------------------------------------------
 // event listeners for bottom bar - safety
 //-------------------------------------------------------------
@@ -109,7 +96,16 @@ let scheduleBottomBar = document.querySelector("#schedule-bottom-bar");
 let scheduleParent = document.querySelector(".schedule");
 let scheduleChildren = scheduleParent.querySelectorAll(".schedule > .parent-nav > .sub-item");
 
+let parentNav = document.querySelector(".parent-nav");
+let allMenuChildren = parentNav.querySelectorAll('.parent-nav > .sub-item');
+
 scheduleBottomBar.addEventListener('click', function () {
+
+  if (allMenuChildren.classList.contains('hide')) {
+    // The box that we clicked has a class of bad so let's remove it and add the good class
+    this.classList.add('hide');
+  }
+
   scheduleBottomBar.classList.toggle("active");
   scheduleChildren.forEach(function (child) {
     child.classList.toggle("hide");

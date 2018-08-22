@@ -39,20 +39,6 @@ nav img {
   vertical-align:middle;
 }
 
-.active {
-  border-bottom: 5px solid white;
-  fill: white;
-  color: white;
-}
-
-.active a {
-  color: white;
-}
-
-.active svg path {
-  fill: white;
-}
-
 .hide {
   display: none;
 }
@@ -159,7 +145,7 @@ nav img {
 }
 
 .bottom-nav li svg path {
-  fill: 300gray;
+  fill: lightgray;
 }
 
 .burger-menu {
@@ -217,3 +203,16 @@ nav img {
   display: inline;
 
 }
+
+.active {
+  border-bottom: 5px solid white;
+}
+
+.bottom-nav li.active a {
+  color: white;
+}
+
+.bottom-nav li.active svg path {
+  fill: white;
+}
+
