@@ -1,133 +1,57 @@
-# alaska-nav
+## A Star Wars Character Search
+This is a very tiny web app that allows you to search for your favorite, or least favorite, star wars character. It uses [SWAPI](https://swapi.co/) as an API endpoint for your query. It will return data from SWAPI for the character search. Data includes the characters name, gender, hair color and eye color. A user can search for a character with any letters and then filter results by gender. With the current implementation the app only returns the first 10 results from SWAPI.
 
-My Schedule & Bidding
-Safety
-  Reporting
-    I-21 Injury Reporting
-    ASAP Reporting
-    General ASAP Information
-    Flight Attendant Incident Report
-  Agriculture & Customs
-  Known Crewmember
-  Product Safety Data Search
-Training
-Administration
-  OJI and Leaves
-  Pay and Benefits
-  Performance
-  Inflight Resource Directory
-  Mobile and Web
-  AFA
-Catering & Brand
-Hotels
-My Base
-Recognition
-My Leadership Team
+## Deployment
+This project uses continuous deployment via [Netlify](https://www.netlify.com/) to deploy from the `master` branch. Check it out [here](https://star-wars-search.netlify.com/).
+
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"  height="144"/>
+</a>
+
+## Tech/framework used
+- jQuery
+- Vanilla JavaScript
+- CSS (from scratch)
+
+<b>Built in</b>
+- [VS Code](https://code.visualstudio.com/)
+
+## API Endpoint
+This app is using the following API endpoint at SWAPI, where `${searchValue}` is the user's search query. You can go to the link in your browser to look at the details. 
+```
+https://swapi.co/api/people/?search=${searchValue}
+```
+
+## API Reference
+- SWAPI docs for people are [here](https://swapi.co/documentation#people).
+- SWAPI docs for searching are [here](https://swapi.co/documentation#search). 
 
 
-<p align="center">
-  <a href="https://next.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
+## Tests
+At this time there are no tests. 
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
+## How to use?
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://next.gatsbyjs.org/docs/gatsby-starters/)._
+![A screencaptured gif of how to use this website](https://cl.ly/461q3t3G3Z2z/Screen%20Recording%202018-02-21%20at%2001.06%20PM.gif)
 
-## 🚀 Quick start
+It is pretty easy to get off the ground with this website. 
+1. Search for your favorite character
+2. Peruse the results
+3. Filter the results by gender if desired.
+4. Search again to your heart's content!
 
-1.  **Install the Gatsby CLI.**
+## Future TODO
+- Build out the ability for more than 10 results to come back from SWAPI (Pagination on SWAPI's end)
+- Write tests!
+- Remove hair color or eye color if the API response for a character is 'N/A', 'none', etc
 
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
+## Contribute
+Feel free to contribute! Just submit a PR and I'll take a look.
 
-    ```sh
-    # install the Gatsby CLI globally
-    npm install -g gatsby-cli
-    ```
+## Credits
+Thanks to Soylent for powering me through this project. 
 
-2.  **Create a Gatsby site.**
+## License
+MIT License is applicable here.
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
-
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter
-    ```
-
-3.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
-
-4.  **Open the source code and start editing!**
-
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
-
-  1.  **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://next.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://next.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won’t change this file directly).
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://next.gatsbyjs.org/). Here are some places to start:
-
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://next.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
--   **To dive straight into code samples head [to our documentation](https://next.gatsbyjs.org/docs/).** In particular, check out the “Guides”, API reference, and “Advanced Tutorials” sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+MIT © [David A. Lindahl](www.davidalindahl.com)

@@ -1,0 +1,87 @@
+.nav-list > * {
+  display: none;
+}
+
+nav li {
+  padding: 0.5em;
+  border: thin black;
+}
+
+nav div:first-child {
+  height: 3em;
+  width: 100%;
+  background: gray;
+}
+
+nav div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav div img:first-child {
+  vertical-align:middle;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+nav img {
+  vertical-align:middle;
+}
+
+.active > * {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list .sub-items {
+  display: none;
+}
+
+.nav-list li {
+  border: red thin;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: blue;
+  height: 80px;
+  display: flex;
+  flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.bottom-nav li a {
+  padding-top: 0.25em;
+}
+
+.bottom-nav li {
+  display:inline-block;
+  width: 25%;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-nav li:last-child {
+  cursor: pointer;
+	transition: opacity 0.2s linear;
+}
+
+.bottom-nav li a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+
+}
+
+  
