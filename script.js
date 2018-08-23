@@ -1,6 +1,22 @@
 window.addEventListener('click', function () {
 });
 
+let allBottomBar = document.querySelector(".bottom-nav");
+
+
+//-------------------------------------------------------------
+// variables to go to empty state
+//-------------------------------------------------------------
+
+// let allSubItemsParents = document.querySelector(".overflow");
+let allSubItems = document.querySelectorAll(".sub-parent-nav .sub-item")
+
+allBottomBar.addEventListener('click', function () {
+  allSubItems.forEach(function (child) {
+    child.classList.add("hide");
+  })
+}, false);
+
 //-------------------------------------------------------------
 // variables for bottom bar - overflow
 //-------------------------------------------------------------
@@ -13,7 +29,6 @@ let overflowChildren = overflowMenuParent.querySelectorAll(".overflow > .parent-
 
 // let burgerMenu = document.querySelectorAll(".burger-menu");
 
-let allBottomBar = document.querySelector(".bottom-nav");
 let bottomChildren = allBottomBar.querySelectorAll(".bottom-nav > li");
 
 
@@ -42,11 +57,16 @@ let parentNav = document.querySelector(".parent-nav");
 // let allMenuChildren = parentNav.querySelectorAll('.parent-nav > .sub-item');
 
 //-------------------------------------------------------------
-// variables for sub-menu inside reporting
+// variables for sub-menus inside reporting - 
 //-------------------------------------------------------------
 let reportingTarget = document.querySelector("#reporting");
-let reportingParent = document.querySelector(".sub-parent-nav");
-let reportingChildren = reportingParent.querySelectorAll(".sub-parent-nav > .sub-item");
+let reportingParent = document.querySelector(".safety .parent-nav");
+let reportingChildren = document.querySelectorAll("#reporting .sub-item");
+
+let agCustomsTarget = document.querySelector("#agCustoms");
+let agCustomsParent = document.querySelector(".safety .parent-nav");
+let agCustomsChildren = document.querySelectorAll("#agCustoms .sub-item");
+
 
 //-------------------------------------------------------------
 //  event listener on bottom bar - overflow
@@ -173,12 +193,24 @@ scheduleBottomBar.addEventListener('click', function () {
 // event listener for reporting menu inside safety
 //-------------------------------------------------------------
 reportingTarget.addEventListener('click', function () {
-  console.log("reportingTarget clicked");
-  console.log(reportingChildren)
+
   reportingChildren.forEach(function (child) {
     child.classList.toggle("hide");
     child.classList.toggle("slide-down-fade-in");
   })
+  reportingTarget.classList.toggle("menu-has-children")
+}, false);
+
+//-------------------------------------------------------------
+// event listener for ag and customs menu inside safety
+//-------------------------------------------------------------
+agCustomsTarget.addEventListener('click', function () {
+  console.log(`agCustomsChildren is: ` + agCustomsChildren)
+  agCustomsChildren.forEach(function (child) {
+    child.classList.toggle("hide");
+    child.classList.toggle("slide-down-fade-in");
+  })
+  agCustomsTarget.classList.toggle("menu-has-children")
 }, false);
 
 

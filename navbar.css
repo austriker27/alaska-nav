@@ -67,7 +67,7 @@ nav img {
 
 }
 
-.reporting-item > a {
+.sub-parent-nav > .sub-item > a {
   font-size: 0.8em;
   font-weight: 300;
 }
@@ -201,7 +201,6 @@ nav img {
   content:url('./images/plus.svg');
   margin: auto 0 auto 15px;
   display: inline;
-
 }
 
 .active {
