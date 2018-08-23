@@ -198,7 +198,9 @@ reportingTarget.addEventListener('click', function () {
 
   reportingChildren.forEach(function (child) {
     child.classList.toggle("hide");
-    child.classList.toggle("slide-down-fade-in");
+  })
+  agCustomsChildren.forEach(function (child) {
+    child.classList.add("hide");
   })
   // reportingTarget.classList.toggle("menu-has-children")
 }, false);
@@ -210,7 +212,9 @@ agCustomsTarget.addEventListener('click', function () {
   console.log(`agCustomsChildren is: ` + agCustomsChildren)
   agCustomsChildren.forEach(function (child) {
     child.classList.toggle("hide");
-    child.classList.toggle("slide-down-fade-in");
+  })
+  reportingChildren.forEach(function (child) {
+    child.classList.add("hide");
   })
   // agCustomsTarget.classList.toggle("menu-has-children")
 }, false);
@@ -221,12 +225,13 @@ agCustomsTarget.addEventListener('click', function () {
 //-------------------------------------------------------------
 
 (function () {
-  var toggle = document.querySelector('.nav-toggle');
+  var hamburgerTarget = document.querySelector('.nav-toggle');
 
-  toggle.addEventListener('click', function (e) {
+  hamburgerTarget.addEventListener('click', function (e) {
     this.classList.toggle('opened');
   });
 })();
+
 
 // let reportingTarget = document.querySelector("#reporting");
 // let reportingParent = document.querySelector(".sub-parent-nav");
