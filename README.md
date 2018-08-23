@@ -1,133 +1,46 @@
-# alaska-nav
-
-My Schedule & Bidding
-Safety
-  Reporting
-    I-21 Injury Reporting
-    ASAP Reporting
-    General ASAP Information
-    Flight Attendant Incident Report
-  Agriculture & Customs
-  Known Crewmember
-  Product Safety Data Search
-Training
-Administration
-  OJI and Leaves
-  Pay and Benefits
-  Performance
-  Inflight Resource Directory
-  Mobile and Web
-  AFA
-Catering & Brand
-Hotels
-My Base
-Recognition
-My Leadership Team
-
-
 <p align="center">
-  <a href="https://next.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
+  <img src="./images/alaska-airlines.svg"  height="80"/>
 </p>
-<h1 align="center">
-  Gatsby's default starter
-</h1>
 
-Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. 
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://next.gatsbyjs.org/docs/gatsby-starters/)._
+# ✈️ Alaska Airlines - In Air App Redesign 
+This is a redesign of a mock Alaska Airlines app for staff to use while on flights. I rebuilt it from scratch using Vanilla JavaScript, CSS and HTML. 
 
-## 🚀 Quick start
+## 🚀 Deployment
+This project uses continuous deployment via [Netlify](https://www.netlify.com/) to deploy from the `master` branch. Check it out [here](https://alaskaair.netlify.com/).
 
-1.  **Install the Gatsby CLI.**
+<a href="https://www.netlify.com">
+  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg"  height="80"/>
+</a>
 
-    The Gatsby CLI helps you create new sites using Gatsby starters (like this one!)
+<b>Built in</b>
+- [VS Code](https://code.visualstudio.com/)
+- Vanilla JS, CSS and HTML
 
-    ```sh
-    # install the Gatsby CLI globally
-    npm install -g gatsby-cli
-    ```
+## 📑 Tests
+At this time there are no tests. 
 
-2.  **Create a Gatsby site.**
+## 🎉 Run on your local machine: 
+1. Clone this repo
+2. run `npm install` from your CLI of choice
+3. run `browser-sync start --server --files "css/*.css"` from your CLI and then visit [Localhost](http://localhost:3000/) to see the site in person. 
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+## 🧐 How to use?
 
-    ```sh
-    # create a new Gatsby site using the default starter
-    gatsby new my-default-starter
-    ```
+Visit [the website](https://alaskaair.netlify.com/) and browse around the app. It's best viewable on a phone sized screen.
 
-3.  **Start developing.**
+## ☑️ Future Todos:
+- better icons in the bottom bar
+- animated greeting
+- make more dry, espcially in DOM manipulation (one example would be writing a function to toggle children in the various menus on click)
 
-    Navigate into your new site’s directory and start it up.
+## 👋 Contribute
+Feel free to contribute! Just submit a PR and I'll take a look.
 
-    ```sh
-    cd my-default-starter/
-    gatsby develop
-    ```
+## 👏 Credits
+Thanks to [Steve Schoger](www.stevechoger.com) for the zondicons used in the bottom bar
 
-4.  **Open the source code and start editing!**
+## 👩‍⚖️ License
+MIT License is applicable here.
+MIT © [David A. Lindahl](www.davidalindahl.com)
 
-    Your site is now running at `http://localhost:8000`!
-    
-    *Note: You'll also see a second link: `http://localhost:8000___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://next.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).*
-    
-    Open the the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
-    
-## 🧐 What's inside?
-
-A quick look at the top-level files and directories you'll see in a Gatsby project.
-
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── .prettierrc
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package-lock.json
-    ├── package.json
-    ├── README.md
-    └── yarn.lock
-
-  1.  **`/node_modules`**: The directory where all of the modules of code that your project depends on (npm packages) are automatically installed.  
-  
-  2.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
-  
-  3.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-  
-  4.  **`.prettierrc`**: This is a configuration file for a tool called [Prettier](https://prettier.io/), which is a tool to help keep the formatting of your code consistent.
-  
-  5.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://next.gatsbyjs.org/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-  
-  6.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://next.gatsbyjs.org/docs/gatsby-config/) for more detail).
-  
-  7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](https://next.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-  
-  8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://next.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-  
-  9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
-  
-  10.  **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. (You won’t change this file directly).
-  
-  11.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-  
-  12.  **`README.md`**: A text file containing useful reference information about your project.
-  
-  13.  **`yarn.lock`**: [Yarn](https://yarnpkg.com/) is a package manager alternative to npm. You can use either yarn or npm, though all of the Gatsby docs reference npm.  This file serves essentially the same purpose as `package-lock.json`, just for a different package management system.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://next.gatsbyjs.org/). Here are some places to start:
-
--   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://next.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
--   **To dive straight into code samples head [to our documentation](https://next.gatsbyjs.org/docs/).** In particular, check out the “Guides”, API reference, and “Advanced Tutorials” sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)

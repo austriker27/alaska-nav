@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+nav li {
+  list-style: none;
+}
+
+.clear-float {
+  float: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.hide {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  background-image: url("./images/mood-lighting-cabin.jpg");
+  background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";  
+  margin: 0 auto;
+  background-color: #00416B;
+  background-blend-mode: multiply;
+}
+
+.container {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.none {
+  display: none;
+}
+
+ul {
+  padding: 0;
+}

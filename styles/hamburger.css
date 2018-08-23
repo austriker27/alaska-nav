@@ -1,0 +1,48 @@
+.nav-toggle {
+  position: relative;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.nav-toggle:focus {
+  outline-width: 0;
+}
+
+.nav-toggle [class*='burger-'] {
+  background: gray;
+  display: block;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: .2s ease all;
+          transition: .2s ease all;
+  
+  cursor: pointer;
+
+  border-radius: 3.5px;
+  height: 3.5px;
+  width: 43.75px;
+  margin-bottom: 7px;
+}
+
+
+.nav-toggle .burger-bot {
+  margin-bottom: 0;
+}
+
+.opened .burger-top {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 15% 15%;
+          transform-origin: 15% 15%;
+}
+
+.opened .burger-mid {
+  opacity: 0;
+}
+
+.opened .burger-bot {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 15% 95%;
+          transform-origin: 15% 95%;
+}

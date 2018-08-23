@@ -1,0 +1,199 @@
+a {
+  text-decoration: none;
+}
+
+.welcome {
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+  padding: 1em;
+  font-style: italic;
+  border-bottom: 2px solid white;
+  margin: 0;
+}
+
+nav {
+  min-height: fit-content;
+}
+
+nav li {
+  padding: 0.5em;
+  border: thin black;
+}
+
+nav div:first-child {
+  height: 3em;
+  width: 100%;
+  background: white;
+}
+
+nav div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav div img:first-child {
+  vertical-align:middle;
+  margin: 0 auto;
+  max-width: 50%;
+}
+
+nav img {
+  vertical-align:middle;
+}
+
+.hide {
+  display: none;
+}
+
+.activeItems {
+  display: block;
+}
+
+.nav-list {
+  transition: width 1s linear 2s;
+  margin: 1em;
+}
+
+.nav-list > li {
+  font-size: 1.3em;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: white;
+}
+
+.parent-nav > li {
+  font-size: 1.5em;
+  font-weight: bold;
+
+}
+
+.sub-parent-nav > .sub-item > a {
+  font-size: 0.8em;
+  font-weight: 300;
+}
+
+.overflow-menu {
+  display: none;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #00416B;
+  height: 6em;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+
+.bottom-nav li a {
+  padding: 1em 0.5em 0 0.5em;
+}
+
+.bottom-nav li {
+  width: 25%;
+  font-size: 0.9em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bottom-nav li a {
+  color: gray;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.bottom-nav li svg {
+  padding: 0.1em;
+  height: 30px;
+  cursor: pointer;
+}
+
+.bottom-nav li button {
+  cursor: pointer;
+}
+
+.bottom-nav li svg path {
+  fill: gray;
+ 
+}
+
+.burger-menu {
+  display: block;
+  float: left;
+  clear: both;
+  height: 4px;
+  width: 40px;
+  border-radius: 40px;
+  background-color: #fff;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.burger-menu:nth-child(1) {
+  margin-top: 10px;
+  z-index: 9;
+  }
+
+.burger-menu:nth-child(2) {
+  margin-top: 25px; 
+}
+
+.burger-menu:nth-child(3) { 
+  margin-top: 40px; 
+}
+
+.menu-has-children:after {
+  content:url('./images/plus.svg');
+  margin: auto 0 auto 15px;
+  display: inline;
+}
+
+.active {
+  border-bottom: 5px solid white;
+}
+
+.bottom-nav li.active a {
+  color: white;
+  font-weight: 700;
+}
+
+.bottom-nav li.active svg path {
+  fill: white;
+}
+  
+.bottom-nav li.active .nav-toggle [class*='burger-'] {
+  background: white;
+}
+
+.sub-parent-nav > li {
+  margin-left: 2em;
+}
+
+.expand-menu {
+  height: 18px;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
+}
