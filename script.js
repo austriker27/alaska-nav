@@ -90,7 +90,7 @@ overflowTarget.addEventListener('click', function () {
   scheduleChildren.forEach(function (child) {
     child.classList.add("hide");
   })
-  adminChildren.forEach(function (child) {
+  safetyChildren.forEach(function (child) {
     child.classList.add("hide");
   })
 }, false);
@@ -145,8 +145,8 @@ adminMenu.addEventListener('click', function () {
 
   adminMenu.classList.toggle("active");
   adminChildren.forEach(function (child) {
-  child.classList.toggle("hide");
-  child.classList.toggle("slide-up-fade-in");
+    child.classList.toggle("hide");
+    child.classList.toggle("slide-up-fade-in");
   })
 
   safetyChildren.forEach(function (child) {
@@ -198,7 +198,7 @@ reportingTarget.addEventListener('click', function () {
     child.classList.toggle("hide");
     child.classList.toggle("slide-down-fade-in");
   })
-  reportingTarget.classList.toggle("menu-has-children")
+  // reportingTarget.classList.toggle("menu-has-children")
 }, false);
 
 //-------------------------------------------------------------
@@ -210,7 +210,7 @@ agCustomsTarget.addEventListener('click', function () {
     child.classList.toggle("hide");
     child.classList.toggle("slide-down-fade-in");
   })
-  agCustomsTarget.classList.toggle("menu-has-children")
+  // agCustomsTarget.classList.toggle("menu-has-children")
 }, false);
 
 

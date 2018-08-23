@@ -117,7 +117,7 @@ nav img {
 
 .bottom-nav li {
   width: 25%;
-  font-size: 0.8em;
+  font-size: 0.9em;
   letter-spacing: 0.1em;
   text-align: center;
   display: flex;
@@ -125,17 +125,17 @@ nav img {
   align-items: center;
   justify-content: center;
 }
-
+/* 
 .bottom-nav li:hover {
   position: relative; 
   top: -3px;
   padding-bottom: 3px
-}
-
+} */
+/* 
 .bottom-nav li:last-child {
   cursor: pointer;
 	transition: opacity 0.2s linear;
-}
+} */
 
 .bottom-nav li a {
   color: gray;
@@ -144,8 +144,14 @@ nav img {
   font-size: 0.8em;
 }
 
+.bottom-nav li svg {
+  padding: 0.1em;
+  height: 40px;
+}
+
 .bottom-nav li svg path {
   fill: lightgray;
+ 
 }
 
 .burger-menu {
@@ -216,7 +222,14 @@ nav img {
   fill: white;
 }
 
-
 .sub-parent-nav > li {
   margin-left: 2em;
+}
+
+.expand-menu {
+  height: 18px;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+  cursor: pointer;
 }
