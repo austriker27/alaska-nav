@@ -1,38 +1,31 @@
 window.addEventListener('click', function () {
 });
 
-
-
 //-------------------------------------------------------------
 // variables for bottom bar - overflow
 //-------------------------------------------------------------
-// for IE10, .getElementsByClassName()[0];
 let overflowTarget = document.querySelector(".overflow-target");
-// let openClose = document.querySelectorAll(".open-close");
 
 let overflowMenuParent = document.querySelector(".overflow");
 let overflowChildren = overflowMenuParent.querySelectorAll(".overflow > .parent-nav > .sub-item");
 
-// let burgerMenu = document.querySelectorAll(".burger-menu");
 let allBottomBar = document.querySelector(".bottom-nav");
 
 let bottomChildren = allBottomBar.querySelectorAll(".bottom-nav > li");
 
+//-------------------------------------------------------------
+// hamburger variable
+//-------------------------------------------------------------
+// let hamburgerTarget = document.querySelector('.nav-toggle');
+// let overflowTarget = document.querySelector(".overflow-target");
+
+let hamburgerParent = document.querySelector('.overflow-target');
+let hamburgerChildren = document.querySelectorAll(".overflow-target > .nav-toggle");
 
 //-------------------------------------------------------------
 // variables to go to empty state
 //-------------------------------------------------------------
-
-// let allSubItemsParents = document.querySelector(".overflow");
 let allSubItems = document.querySelectorAll(".sub-parent-nav .sub-item")
-
-allBottomBar.addEventListener('click', function () {
-  allSubItems.forEach(function (child) {
-    child.classList.add("hide");
-  })
-}, false);
-
-
 
 //-------------------------------------------------------------
 // variables for bottom bar - safety
@@ -55,11 +48,8 @@ let scheduleBottomBar = document.querySelector("#schedule-bottom-bar");
 let scheduleParent = document.querySelector(".schedule");
 let scheduleChildren = scheduleParent.querySelectorAll(".schedule > .parent-nav > .sub-item");
 
-let parentNav = document.querySelector(".parent-nav");
-// let allMenuChildren = parentNav.querySelectorAll('.parent-nav > .sub-item');
-
 //-------------------------------------------------------------
-// variables for sub-menus inside reporting - 
+// variables for sub-menus inside reporting
 //-------------------------------------------------------------
 let reportingTarget = document.querySelector("#reporting");
 let reportingParent = document.querySelector(".safety .parent-nav");
@@ -69,6 +59,15 @@ let agCustomsTarget = document.querySelector("#agCustoms");
 let agCustomsParent = document.querySelector(".safety .parent-nav");
 let agCustomsChildren = document.querySelectorAll("#agCustoms .sub-item");
 
+
+//-------------------------------------------------------------
+// empty state when bottom bar clicked
+//-------------------------------------------------------------
+allBottomBar.addEventListener('click', function () {
+  allSubItems.forEach(function (child) {
+    child.classList.add("hide");
+  })
+}, false);
 
 //-------------------------------------------------------------
 //  event listener on bottom bar - overflow
@@ -82,9 +81,7 @@ overflowTarget.addEventListener('click', function () {
   overflowTarget.classList.toggle("active");
   overflowChildren.forEach(function (child) {
     child.classList.toggle("hide");
-    // child.classList.toggle("slide-up-fade-in")
   })
-  // burgerMenu.classList.toggle("openClose");
 
   adminChildren.forEach(function (child) {
     child.classList.add("hide");
@@ -105,6 +102,9 @@ safetyBottomBar.addEventListener('click', function () {
   // remove active off all bottom nav bars
   bottomChildren.forEach(function (child) {
     child.classList.remove("active");
+  })
+  hamburgerChildren.forEach(function (child) {
+    child.classList.remove("opened");
   })
 
   safetyBottomBar.classList.toggle("active");
@@ -144,6 +144,9 @@ adminMenu.addEventListener('click', function () {
   bottomChildren.forEach(function (child) {
     child.classList.remove("active");
   })
+  hamburgerChildren.forEach(function (child) {
+    child.classList.remove("opened");
+  })
 
   adminMenu.classList.toggle("active");
   adminChildren.forEach(function (child) {
@@ -172,6 +175,10 @@ scheduleBottomBar.addEventListener('click', function () {
   bottomChildren.forEach(function (child) {
     child.classList.remove("active");
   })
+  hamburgerChildren.forEach(function (child) {
+    child.classList.remove("opened");
+  })
+
 
   scheduleBottomBar.classList.toggle("active");
 
@@ -209,7 +216,7 @@ reportingTarget.addEventListener('click', function () {
 // event listener for ag and customs menu inside safety
 //-------------------------------------------------------------
 agCustomsTarget.addEventListener('click', function () {
-  console.log(`agCustomsChildren is: ` + agCustomsChildren)
+
   agCustomsChildren.forEach(function (child) {
     child.classList.toggle("hide");
   })
@@ -221,16 +228,29 @@ agCustomsTarget.addEventListener('click', function () {
 
 
 //-------------------------------------------------------------
-// hamburger on click
+// hamburger open on click
 //-------------------------------------------------------------
 
-(function () {
-  var hamburgerTarget = document.querySelector('.nav-toggle');
+overflowTarget.addEventListener('click', function () {
 
-  hamburgerTarget.addEventListener('click', function (e) {
-    this.classList.toggle('opened');
-  });
-})();
+  hamburgerChildren.forEach(function (child) {
+    child.classList.toggle("opened");
+  })
+}, false);
+
+
+// hamburgerTarget.addEventListener('click', function (e) {
+//   this.classList.remove('opened');
+// });
+
+// overflowTarget.addEventListener('click', function () {
+
+//   hamburgerChildren.forEach(function (child) {
+//     child.classList.remove("opened");
+//   })
+// }, false);
+
+
 
 
 // let reportingTarget = document.querySelector("#reporting");
