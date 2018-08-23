@@ -3,7 +3,7 @@
 </p>
 
 
-# Alaska Airlines - In Air App Redesign ✈️
+# ✈️ Alaska Airlines - In Air App Redesign 
 This is a redesign of a mock Alaska Airlines app for staff to use while on flights. I rebuilt it from scratch using Vanilla JavaScript, CSS and HTML. 
 
 ## 🚀 Deployment
@@ -17,7 +17,7 @@ This project uses continuous deployment via [Netlify](https://www.netlify.com/) 
 - [VS Code](https://code.visualstudio.com/)
 - Vanilla JS, CSS and HTML
 
-## Tests
+## 📑 Tests
 At this time there are no tests. 
 
 ## 🎉 Run on your local machine: 
@@ -29,19 +29,18 @@ At this time there are no tests.
 
 Visit [the website](https://alaskaair.netlify.com/) and browse around the app. It's best viewable on a phone sized screen.
 
-## FUTURE TODO: 
+## ☑️ Future Todos:
 - better icons in the bottom bar
 - animated greeting
 - make more dry, espcially in DOM manipulation (one example would be writing a function to toggle children in the various menus on click)
 
-## Contribute
+## 👋 Contribute
 Feel free to contribute! Just submit a PR and I'll take a look.
 
-## Credits
+## 👏 Credits
 Thanks to [Steve Schoger](www.stevechoger.com) for the zondicons used in the bottom bar
 
-## License
+## 👩‍⚖️ License
 MIT License is applicable here.
-
 MIT © [David A. Lindahl](www.davidalindahl.com)
 
