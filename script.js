@@ -1,7 +1,22 @@
 window.addEventListener('click', function () {
 });
 
+
+
+//-------------------------------------------------------------
+// variables for bottom bar - overflow
+//-------------------------------------------------------------
+// for IE10, .getElementsByClassName()[0];
+let overflowTarget = document.querySelector(".overflow-target");
+// let openClose = document.querySelectorAll(".open-close");
+
+let overflowMenuParent = document.querySelector(".overflow");
+let overflowChildren = overflowMenuParent.querySelectorAll(".overflow > .parent-nav > .sub-item");
+
+// let burgerMenu = document.querySelectorAll(".burger-menu");
 let allBottomBar = document.querySelector(".bottom-nav");
+
+let bottomChildren = allBottomBar.querySelectorAll(".bottom-nav > li");
 
 
 //-------------------------------------------------------------
@@ -17,19 +32,6 @@ allBottomBar.addEventListener('click', function () {
   })
 }, false);
 
-//-------------------------------------------------------------
-// variables for bottom bar - overflow
-//-------------------------------------------------------------
-// for IE10, .getElementsByClassName()[0];
-let overflowTarget = document.querySelector(".overflow-target");
-// let openClose = document.querySelectorAll(".open-close");
-
-let overflowMenuParent = document.querySelector(".overflow");
-let overflowChildren = overflowMenuParent.querySelectorAll(".overflow > .parent-nav > .sub-item");
-
-// let burgerMenu = document.querySelectorAll(".burger-menu");
-
-let bottomChildren = allBottomBar.querySelectorAll(".bottom-nav > li");
 
 
 //-------------------------------------------------------------
@@ -80,7 +82,7 @@ overflowTarget.addEventListener('click', function () {
   overflowTarget.classList.toggle("active");
   overflowChildren.forEach(function (child) {
     child.classList.toggle("hide");
-    child.classList.toggle("slide-up-fade-in")
+    // child.classList.toggle("slide-up-fade-in")
   })
   // burgerMenu.classList.toggle("openClose");
 
@@ -108,7 +110,7 @@ safetyBottomBar.addEventListener('click', function () {
   safetyBottomBar.classList.toggle("active");
   safetyChildren.forEach(function (child) {
   child.classList.toggle("hide");
-  child.classList.toggle("slide-up-fade-in");
+  // child.classList.toggle("slide-up-fade-in");
 
   adminChildren.forEach(function (child) {
     child.classList.add("hide");
@@ -130,7 +132,7 @@ safetyBottomBar.addEventListener('click', function () {
 //   scheduleBottomBar.classList.toggle("active");
 //   scheduleChildren.forEach(function (child) {
 //     child.classList.toggle("hide");
-//     child.classList.toggle("slide-up-fade-in");
+    // child.classList.toggle("slide-up-fade-in");
 //   }, false);
 
 
@@ -146,7 +148,7 @@ adminMenu.addEventListener('click', function () {
   adminMenu.classList.toggle("active");
   adminChildren.forEach(function (child) {
     child.classList.toggle("hide");
-    child.classList.toggle("slide-up-fade-in");
+    // child.classList.toggle("slide-up-fade-in");
   })
 
   safetyChildren.forEach(function (child) {
@@ -175,7 +177,7 @@ scheduleBottomBar.addEventListener('click', function () {
 
   scheduleChildren.forEach(function (child) {
     child.classList.toggle("hide");
-    child.classList.toggle("slide-up-fade-in");
+    // child.classList.toggle("slide-up-fade-in");
   })
   safetyChildren.forEach(function (child) {
     child.classList.add("hide");
@@ -214,6 +216,18 @@ agCustomsTarget.addEventListener('click', function () {
 }, false);
 
 
+//-------------------------------------------------------------
+// hamburger on click
+//-------------------------------------------------------------
+
+(function () {
+  var toggle = document.querySelector('.nav-toggle');
+
+  toggle.addEventListener('click', function (e) {
+    this.classList.toggle('opened');
+  });
+})();
+
 // let reportingTarget = document.querySelector("#reporting");
 // let reportingParent = document.querySelector(".sub-parent-nav");
 // let reportingChildren = reportingParent.querySelectorAll("#reporting > .sub-parent-nav > .sub-item");
@@ -228,7 +242,7 @@ agCustomsTarget.addEventListener('click', function () {
 
 //   scheduleChildren.forEach(function (child) {
 //     child.classList.toggle("hide");
-//     child.classList.toggle("slide-up-fade-in");
+    // child.classList.toggle("slide-up-fade-in");
 //   })
 
 
@@ -254,6 +268,6 @@ agCustomsTarget.addEventListener('click', function () {
 //   scheduleBottomBar.classList.toggle("active");
 //   scheduleChildren.forEach(function (child) {
 //     child.classList.toggle("hide");
-//     child.classList.toggle("slide-up-fade-in");
+    // child.classList.toggle("slide-up-fade-in");
 //   })
 // }, false);
